@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/main.css" rel="stylesheet" />
+    <link href="css/media.css   " rel="stylesheet" />
+    
+    <title>Captive Portal</title>
+</head>
+<body>
+    <section class="mobile">
+        <header class="fixed">
+            <a href="Pg-Default-Home-HighSpeed.html"><span class="icon-Home"></span></a>
+            <div class="logo"><img src="images/logo.png"/>
+                <div class="welcome-msg">Global Roaming</div>
+            </div>
+            
+        </header>
+        <section class="fixed-header-section">
+            <div class="action-area">
+                <a href="accept-term.html" class="back-btn"><span class="icon-left-arrow"></span> Back</a>
+                <div class="steps-process">
+                    <ul>
+                        <li class="active">
+                            <span class="number">1</span>
+                            <div>Select Plan</div>
+                        </li>
+                        <li class="active">
+                            <span class="number">2</span>
+                            <div>Accept Terms</div>
+                        </li>
+                        <li class="active">
+                            <span class="number">3</span>
+                            <div>Confirm</div>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+
+            <br/>
+            <br/>
+
+                   <p class="confirmation-msg">
+                    You have selected <strong>Day Pass (24 hours)</strong>. You will be charged <strong>$5.75</strong> and the charge will appear on your monthly bill.
+                    
+                    <br/>
+                    Click on the button below to confirm.
+                   </p>
+                   <br/>
+            <div class="footer-div mobile">
+                   <div class="confimation-section custom-check">
+                       <input type="checkbox" id="confirmation" /><label for="confirmation" class="confirmation-label">I have read and accepted </label> <span id="showTermsmodal" class="hyperlink">Terms of Service</a>
+                   </div>
+                   <br/>
+                    <a id="confirmationbtn" href="thankyou.html" class="dark-button block confirmation disabled">Confirm</a>
+                    <div class="revert-action">You won’t be able to revert this action</div>
+        </div>
+        </section>
+</section>
+
+<div class="overlay" id="termsAndCondition">
+    <div class="modal">
+        <div class="modal-header">Terms of Service <span class="icon-Combined-Shape-Copy-8 close"></span></div>
+        <div class="modal-body">
+            Data purchased may only be available for country purchased in. 24 hour pass expires 24 hours after purchase. 7 day pass expires 7 days from time of purchase. Pay as you go data enabled to access data services, additional opt in may be required. Data in sel. countries on GPRS/UMTS/LTE networks, require int’l capable phone & eligible domestic svc. plan on the acct. with primary usage in U.S. Not for extended int’l use ; primary usage must occur
+        </div>
+
+    </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $('#showTermsmodal').on('click', function(){
+            $('#termsAndCondition').css('display', 'flex');
+        })
+        $('.close').on('click', function(){
+            $('#termsAndCondition').hide();
+        })
+        $('#confirmation').change(function() {
+            if(this.checked){
+                $('#confirmationbtn').removeClass('disabled')
+            }
+            else{
+                $('#confirmationbtn').addClass('disabled')
+            }
+        });
+        
+    })
+</script>
+</body>
+</html>

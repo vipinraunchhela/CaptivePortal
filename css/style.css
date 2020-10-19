@@ -1,0 +1,81 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?z91ogq');
+  src:  url('../fonts/icomoon.eot?z91ogq#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?z91ogq') format('truetype'),
+    url('../fonts/icomoon.woff?z91ogq') format('woff'),
+    url('../fonts/icomoon.svg?z91ogq#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-Home:before {
+  content: "\e900";
+}
+.icon-Call:before {
+  content: "\e901";
+}
+.icon-Copyright:before {
+  content: "\e902";
+}
+.icon-Data:before {
+  content: "\e903";
+}
+.icon-Help:before {
+  content: "\e904";
+}
+.icon-high-speed:before {
+  content: "\e906";
+}
+.icon-Info:before {
+  content: "\e907";
+}
+.icon-Terms-of-Service:before {
+  content: "\e908";
+}
+.icon-troubleshooting:before {
+  content: "\e909";
+}
+.icon-Combined-Shape-Copy-8:before {
+  content: "\e91b";
+}
+.icon-checkmark:before {
+  content: "\e91c";
+}
+.icon-false:before {
+  content: "\e91e";
+}
+.icon-right-arrow:before {
+  content: "\e922";
+}
+.icon-left-arrow:before {
+  content: "\e947";
+}
+.icon-filter-arrow:before {
+  content: "\e910";
+}
+.icon-info:before {
+  content: "\e905";
+}
+.icon-checkbox-checked:before {
+  content: "\ea52";
+}
+.icon-checkbox-unchecked:before {
+  content: "\ea53";
+}
