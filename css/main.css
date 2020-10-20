@@ -221,7 +221,7 @@ header {
     color: #fff;
 }
 span.spacer {
-    padding: 0 5px;
+    padding: 0 2px;
     color: #c7c5c5;
     line-height: 6px;
     font-size: 20px;
@@ -234,14 +234,14 @@ span.spacer {
     margin-bottom: 24px;
 }
 span.label {
-    width: 104px;
+    width: 110px;
     display: inline-block;
     color: #6A6A6A;
     font-size: 14px;
     font-weight: 500;
     letter-spacing: 0;
     line-height: 36px;
-    margin-right: 20px;
+    margin-right: 15px;
     text-align: right;
 }
 .dark-button.block.confirmation{
@@ -508,6 +508,12 @@ li.active .number{
     letter-spacing: 0;
     line-height: 20px;
     text-align: center;
+}
+.tag-width span.label{
+    width: 80px;
+}
+.no-border strong{
+    font-size: 14px !important;
 }
 
 
