@@ -3,6 +3,11 @@
         position: absolute;
         bottom:20px;
     }
+    .fixed-header-section{
+        position: relative;
+        min-height: calc(100vh - 211px);
+        padding-bottom: 80px;
+    }
 }
 @media screen and (min-width: 320px) and (max-width: 640px) and (orientation: landscape) {
     .dark-button.block.confirmation {
@@ -16,7 +21,7 @@
 
 
 @media screen and (max-width: 630px){
-    .dark-button.block.confirmation {        
+    .dark-button.block.confirmation {
         position: absolute;
         bottom: 20px;
         width: auto;
@@ -24,14 +29,29 @@
     }
     .dark-button.block {
         position: absolute;
-        bottom: 30px;
-        width: 75%;
+        bottom: 10px;
         margin: auto;
     }
-    .thankyou-msg {
-        padding: 25vh 0 25vh;
-        height: auto;
+    .dark-button.block {
+        left: 0;
+        right: 0;
     }
+    .thankyou-msg {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        min-height: calc(100vh - 278px);
+        justify-content: center;
+        padding: 0;
+    }
+    .footer-div {
+        padding: 20px 0;
+        bottom: 0;
+        margin-bottom: -30px;
+    }
+}
+
+@media screen and (max-width: 320px){
 }
 
 @media screen and (max-device-width: 1000px) and (orientation: landscape) {
@@ -40,11 +60,11 @@
     }
     .thankyou-msg {
         padding: 100px 0 50px;
-    }   
-    
+    }
+
 }
 @media screen and (min-device-width: 1000px) and (orientation: landscape) {
-    
+
     a.dark-button.block.confirmation {
         position: absolute;
         bottom: 40px;
