@@ -58,6 +58,9 @@
     .plan p strong{
         font-size: 13px;
     }
+    .phone-input{
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 320px){

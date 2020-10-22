@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../css/style.css" rel="stylesheet" />
+  <link href="../css/main.css" rel="stylesheet" />
+
+  <title>Captive Portal</title>
+</head>
+<body>
+<section class="mobile">
+
+  <header class="fixed">
+    <a href="Pg-Default-Home-HighSpeed.html"><span class="icon-Home"></span></a>
+    <div class="logo"><img src="../images/logo.png"/>
+      <div class="welcome-msg">Global Roaming</div>
+    </div>
+
+  </header>
+
+
+  <section class="fixed-header-section">
+    <div class="action-area text-center">
+      <span class="travel-heading">We’ve hit a speed bump.</span>
+    </div>
+
+
+    <ul class="card-view token-card">
+      <li class="plan calling">
+        <p class="no-border">We didn’t receive the information needed to provide your details. If you are traveling
+          internationally, please click the link sent in the welcome text to your device to access
+          international roaming information.<br/><br/>
+          If you did not receive the welcome text with a link please <strong>enter your phone number</strong> below
+          for an updated link to be sent to your phone.</p>
+        <div class="phone-box">
+        <input type="tel" id="phone-number" class="phone-input"
+               placeholder="Enter your phone number" name="Phone"></div><br>
+        <a id="sendLinkBtn" href="#" class="dark-button send-link confirmation disabled">Send Link
+        </a>
+      </li>
+    </ul>
+    <p class="error-contact text-left mt-50">Please note this page is only available when traveling internationally. <br>
+      If you are not traveling and need to contact Sprint, please
+      call <a href="tel:+1-817-698-4199">+1-817-698-4199 </a>&nbsp; or chat from <br/>
+      <a href="www.sprint.com/swwsupport">www.sprint.com/swwsupport.</a></p>
+  </section>
+</section>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $('#phone-number').on('input', function(){
+            var filteredValue = this.value.match(/\d*/g).join('');;
+            $(this).val(filteredValue
+                .replace(/(\d{0,3})\-?(\d{0,3})\-?(\d{0,4}).*/,'$1-$2-$3')
+                .replace(/\-+$/, '')
+                .replace(/(\d{3})\-?(\d{3})\-?(\d{4})/,'$1-$2-$3'));
+            if(this.value.length === 12){
+                $('#sendLinkBtn').removeClass('disabled');
+            } else {
+                $('#sendLinkBtn').addClass('disabled');
+            }
+        });
+        $('#sendLinkBtn').click(function () {
+            var str =  $('#phone-number').val();
+            var newStr = '+1' + str.replace(/-/g, "");
+            console.log(newStr);
+        })
+    })
+</script>
+</body>
+</html>

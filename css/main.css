@@ -516,4 +516,60 @@ li.active .number{
     font-size: 14px !important;
 }
 
-
+.phone-input{
+    box-sizing: border-box;
+    border: 1px solid #B3B3B3;
+    border-radius: 4px;
+    background-color: #FFFFFF;
+    height: 38px;
+    width: 100%;
+    padding: 0 12px 0 50px;
+    display: block;
+}
+.phone-box{
+    position: relative;
+}
+.phone-input:focus{
+    outline: 0;
+}
+.text-center{
+    text-align: center;
+}
+.text-left{
+    text-align: left;
+}
+.mt-50{
+    margin-top: 50px;
+}
+.mb-0{
+    margin-bottom: 0 !important;
+}
+.phone-box::after{
+    content: "+1";
+    position: absolute;
+    left: 1px;
+    width: 38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #e2e0e0;
+    top: 1px;
+    height: calc(100% - 2px);
+    border-radius: 4px 0 0 4px;
+    letter-spacing: 0.5px;
+    font-size: 14px;
+}
+.dark-button.send-link.confirmation.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+    cursor: no-drop;
+}
+.no-border.color-red{
+    color: #D90000;
+    font-size: 14px;
+    letter-spacing: 0;
+    line-height: 21px;
+}
+ul.card-view.token-card{
+    margin: 25px 0 0;
+}
